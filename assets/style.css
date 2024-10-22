@@ -89,7 +89,7 @@ main .container{
   z-index: 20;
 }
 
-.card:hover .hearts{
+.hearts:hover{
   color: red;
 }
 
