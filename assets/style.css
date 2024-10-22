@@ -1,5 +1,4 @@
 *{
-  z-index: 10;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +11,7 @@ header{
 }
 
 .container{
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -24,7 +23,7 @@ header{
   max-width: 300px;
 }
 
-.col img{
+img{
   max-width: 100%;
   height: auto;
   display: block;
@@ -52,44 +51,46 @@ a:hover{
   color:black
 }
 
+/* .debug{
+  background-color: rgba(255, 0, 0, .2);
+  border: 1px solid black;
+} */
+
 main .container{
-  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .card{
-  cursor: pointer;
-  padding: 10px;
   position: relative;
-  max-width: 270px;;
+  cursor: pointer;
+  width: 300px;
+  height: 500px;
+  margin: 10px;
+}
+
+.immaginefissa{
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.immaginenascosta{
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover .immaginenascosta{
+  z-index: 20;
 }
 
 .card:hover .hearts{
   color: red;
-}
-
-.sostenibilita{
-  position: absolute;
-  background-color: green;
-  color: white;
-  padding: 3px;
-  top: 320px;
-}
-
-.sconto{
-  position: absolute;
-  background-color: red;
-  color: white;
-  padding: 3px;
-  top: 320px;
-}
-
-.sost{
-  position: absolute;
-  background-color: green;
-  color: white;
-  padding: 3px;
-  top: 320px;
-  left: 60px;
 }
 
 .hearts{
@@ -98,28 +99,58 @@ main .container{
   color: black;
   padding: 15px;
   top: 20px;
-  right: 10px;
+  right: 0;
+  z-index: 50;
 }
 
-.card img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-  text-align: center;
+.sconto{
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  bottom: 100px;
+  z-index: 50;
 }
 
-main .container.flex{
-  justify-content: center;
-  flex-wrap: wrap;
+.sost{
+  position: absolute;
+  background-color: green;
+  color: white;
+  padding: 3px;
+  bottom: 100px;
+  left: 50px;
+  z-index: 50;
+}
+
+.sostenibilita{
+  position: absolute;
+  background-color: green;
+  color: white;
+  padding: 3px;
+  bottom: 100px;
+  z-index: 50;
 }
 
 main h2{
-  font-size: 0.9rem;
+  position: absolute;
+  bottom: 25px;
+  font-size: 1.2rem;
+  z-index: 50;
 }
 
 .prezzo{
+  position: absolute;
+  z-index: 50;
   color: red;
   font-weight:bold;
+  bottom: 5px;
+  left: 0;
+}
+
+.brand{
+  position: absolute;
+  bottom: 45px;
+  z-index: 50;
 }
 
 .prezzo_old{
